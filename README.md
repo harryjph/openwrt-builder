@@ -11,3 +11,7 @@ The config is saved as a file named `config`.
 
 Run: `./build.sh`.
 The output will be in `build/bin/targets`.
+
+## Changing the OpenWRT Version
+
+Modify [this line](https://github.com/harry1453/openwrt-builder/blob/master/Dockerfile#L13)
