@@ -18,13 +18,3 @@ RUN ./scripts/feeds update -a && ./scripts/feeds install -a
 # Install Helper Scripts
 COPY helpers/menuconfig.sh .
 COPY helpers/build.sh .
-
-# Configure OpenWRT using
-#COPY openwrt_config .config
-#RUN make defconfig
-
-# TODO: Add a script that allows config editing using `make menuconfig`, and that writes back the configuration diff
-# Steps are: Make changes using make menuconfig, save them, then run `./scripts/diffconfig.sh > openwrt_config` and saving the openwrt_config file
-
-# Compile OpenWRT
-#RUN FORCE_UNSAFE_CONFIGURE=1 make -j16
