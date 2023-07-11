@@ -1,4 +1,8 @@
 #!/usr/bin/env bash
 cp config_diff .config
 make defconfig
-FORCE_UNSAFE_CONFIGURE=1 make
+if [[ $DEBUG ]]; then
+    FORCE_UNSAFE_CONFIGURE=1 make -j1 V=s
+else
+    FORCE_UNSAFE_CONFIGURE=1 make -j$(nproc)
+fi
